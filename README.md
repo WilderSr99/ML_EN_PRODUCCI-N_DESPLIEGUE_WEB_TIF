@@ -104,9 +104,11 @@ Limitada capacidad de acción proactiva en la gestión de calidad del agua.
 
 - 📁 **Modelo de Regresión:**  
   https://github.com/zerolab-dev/TRABAJO_REGRESION_G4  
+  https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git
 
 - 📁 **Modelo de Clasificación:**  
-  *(Agregar aquí el repositorio correspondiente si está separado)*
+  https://github.com/zerolab-dev/TRABAJO_REGRESION_G4  
+  https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git
 
 ---
 
