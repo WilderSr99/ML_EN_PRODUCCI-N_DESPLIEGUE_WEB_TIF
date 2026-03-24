@@ -163,4 +163,5 @@ if st.sidebar.button("Predecir"):
 
 # Colocar el botón "Resetear" debajo del botón "Predecir"
 st.sidebar.button("Resetear", on_click=reset_inputs)
-#streamlit run streamlitpipelines.py para ejecutar la aplicación
+#streamlit run streamlitpipelines_Reg.py 
+# para ejecutar la aplicación

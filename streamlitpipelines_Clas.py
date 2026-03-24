@@ -88,4 +88,4 @@ def reset_inputs():
 
 # Botón para resetear
 st.sidebar.button("Resetear", on_click=reset_inputs)
-#streamlit run streamlitpipelines.py para ejecutar la aplicación
+#streamlit run streamlitpipelines_Clas.py para ejecutar la aplicación
