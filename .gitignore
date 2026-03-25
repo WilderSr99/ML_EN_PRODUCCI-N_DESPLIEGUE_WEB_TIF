@@ -36,3 +36,6 @@ Thumbs.db
 *.json
 *.ipynb
 *.ipynb
+# Notebooks
+*.ipynb
+.ipynb_checkpoints/
