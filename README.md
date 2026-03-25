@@ -1,117 +1,12 @@
-# 📊 Proyectos de Machine Learning  
-## Predicción Presupuestal y Calidad del Agua (MVCS)
+# 📊 Proyecto de Despliegue de Modelos de Machine Learning en Web
 
-Este repositorio contiene la implementación y despliegue de dos modelos de **Machine Learning** orientados a transformar el análisis descriptivo tradicional en herramientas predictivas proactivas dentro del sector público peruano.
-
----
-
-## 📌 1. Proyectos Desarrollados
-
-### 🔹 A. Modelo de Regresión: Ejecución Presupuestal (Sector Producción)
-
-**Objetivo:**  
-Anticipar el nivel de ejecución presupuestal al cierre del tercer trimestre (septiembre).
-
-**Problemática:**  
-La gestión actual se basa en análisis descriptivos que no aprovechan el comportamiento histórico para predecir el gasto futuro.
-
-**Metodología:**  
-- Dataset: Datos abiertos del MEF (2017–2025)  
-- Tamaño: ~30,000 registros  
-
-**Algoritmo Seleccionado:**  
-- `XGBoost`  
-- Métrica: RMSE ≈ 13% – 14%  
-
-**Variables Clave:**  
-- Porcentaje acumulado al mes de agosto  
-- Variación mensual de ejecución  
-- Departamento  
-- Categoría de gasto  
+**Curso:** 612491 - Machine Learning en Producción (Despliegue Web)  
+**Docente:** Orlando Advíncula Zeballos  
+**Grupo:** 04  
 
 ---
 
-### 🔹 B. Modelo de Clasificación: Cloro Residual (MVCS)
-
-**Objetivo:**  
-Predecir el cumplimiento de estándares de cloro residual en sistemas de agua potable.
-
-**Contexto:**  
-- 18,855 prestadores de servicios de saneamiento  
-- Solo el 35% cumple con niveles adecuados  
-
-**Problemática:**  
-Limitada capacidad de acción proactiva en la gestión de calidad del agua.
-
-**Enfoque:**  
-- Modelo de clasificación para detección temprana de riesgo  
-- Sistema de alertas y priorización  
-
-**Impacto Esperado:**  
-- Optimización de inversiones  
-- Mejora en programas de asistencia técnica  
-- Gestión basada en riesgos  
-
----
-
-## ⚙️ 2. Flujo de Trabajo (Machine Learning Lifecycle)
-
-### 🧪 Fase 1: Construcción y Entrenamiento
-
-- Exploración y limpieza de datos (`pandas`)  
-- Ingeniería de características (variables acumuladas y variaciones)  
-- Selección de variables (Boruta, RFE)  
-- Entrenamiento de modelos:
-  - Random Forest  
-  - Gradient Boosting  
-  - XGBoost  
-- Evaluación con métricas (RMSE, MAE, accuracy según el caso)  
-- Exportación del modelo (`.joblib`)  
-
----
-
-### 🖥️ Fase 2: Desarrollo de la Interfaz
-
-- Implementación en **Streamlit**  
-- Archivo principal: `streamlitpipelines.py`  
-- Transformación de inputs del usuario  
-- Predicciones en tiempo real  
-- Visualización:
-  - Gráficos de barras  
-  - Insights para toma de decisiones  
-
----
-
-### 🚀 Fase 3: Despliegue
-
-- Versionamiento en GitHub  
-- Despliegue en **Streamlit Cloud**  
-- Instalación automática de dependencias (`requirements.txt`)  
-
----
-
-## 🌐 3. Acceso a las Aplicaciones
-
-### 🔹 App de Regresión (Ejecución Presupuestal)
-👉 https://grupo4regresion.streamlit.app/
-
-### 🔹 App de Clasificación (Cloro Residual)
-👉 https://grupo4clasificacion.streamlit.app/
-
----
-
-## 💻 4. Repositorios del Proyecto
-
-- 📁 **Modelo de Regresión:**  
-  https://github.com/zerolab-dev/TRABAJO_REGRESION_G4  
-  https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git
-
-- 📁 **Modelo de Clasificación:**  
-  https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git
-
----
-
-## 👥 5. Integrantes – Grupo 04
+## 👥 Integrantes
 
 - Chavez Gallo, Daniel Alfredo  
 - Medina Santamaria, Carlos Santiago  
@@ -122,15 +17,147 @@ Limitada capacidad de acción proactiva en la gestión de calidad del agua.
 
 ---
 
-## 📈 6. Enfoque del Proyecto
+## 🧠 Descripción del Proyecto
 
-Este trabajo integra dos enfoques complementarios:
+Este repositorio presenta el desarrollo, implementación y despliegue de dos modelos de **Machine Learning** orientados a fortalecer la **toma de decisiones en el sector público peruano**, específicamente en:
 
-- **Regresión:** Anticipación cuantitativa del gasto público  
-- **Clasificación:** Identificación de riesgo en calidad del agua  
+- 💰 Ejecución presupuestal  
+- 🚰 Calidad del agua (cloro residual)  
 
-Ambos modelos permiten:
+El enfoque del proyecto busca evolucionar desde análisis descriptivos hacia **sistemas predictivos proactivos**, facilitando la gestión basada en datos.
 
+---
+
+## 📌 Proyectos Desarrollados
+
+### 🔹 A. Modelo de Regresión: Ejecución Presupuestal
+
+**Objetivo:**  
+Predecir el nivel de ejecución presupuestal al cierre del tercer trimestre (septiembre).
+
+**Fuente de datos:**  
+- Datos abiertos del MEF (2017–2025)  
+- ~30,000 registros  
+
+**Problemática:**  
+La gestión presupuestal suele depender de análisis históricos descriptivos sin capacidad predictiva.
+
+**Modelo implementado:**  
+- Algoritmo: `XGBoost`  
+- Métrica principal: RMSE ≈ 13% – 14%  
+
+**Variables relevantes:**
+- % de ejecución acumulada a agosto  
+- Variación mensual  
+- Departamento  
+- Categoría de gasto  
+
+---
+
+### 🔹 B. Modelo de Clasificación: Cloro Residual (MVCS)
+
+**Objetivo:**  
+Predecir el cumplimiento de niveles adecuados de cloro residual en sistemas de agua potable.
+
+**Contexto:**
+- 18,855 prestadores de servicios de saneamiento  
+- Solo ~35% cumple con estándares  
+
+**Problemática:**  
+Limitada capacidad de detección temprana de riesgo en la calidad del agua.
+
+**Enfoque del modelo:**
+- Clasificación supervisada  
+- Sistema de alerta temprana  
+- Priorización de intervenciones  
+
+**Impacto esperado:**
+- Optimización de inversiones públicas  
+- Mejora en asistencia técnica  
+- Gestión basada en riesgo  
+
+---
+
+## ⚙️ Pipeline de Machine Learning
+
+### 🧪 1. Construcción y Entrenamiento
+
+- Limpieza y análisis exploratorio (`pandas`)  
+- Ingeniería de características  
+- Selección de variables:
+  - Boruta  
+  - RFE  
+- Modelos evaluados:
+  - Random Forest  
+  - Gradient Boosting  
+  - XGBoost  
+- Métricas:
+  - Regresión: RMSE, MAE  
+  - Clasificación: Accuracy  
+- Serialización del modelo (`.joblib`)  
+
+---
+
+### 🖥️ 2. Desarrollo de la Aplicación
+
+- Framework: **Streamlit**  
+- Archivo principal: `streamlitpipelines.py`  
+
+**Funcionalidades:**
+- Ingreso de variables por el usuario  
+- Transformación de inputs  
+- Predicción en tiempo real  
+- Visualización de resultados:
+  - Gráficos  
+  - Indicadores clave  
+
+---
+
+### 🚀 3. Despliegue
+
+- Control de versiones con GitHub  
+- Despliegue en **Streamlit Cloud**  
+- Gestión de dependencias con `requirements.txt`  
+
+---
+
+## 🌐 Aplicaciones en Producción
+
+### 🔹 Modelo de Regresión
+👉 https://grupo4regresion.streamlit.app/
+
+### 🔹 Modelo de Clasificación
+👉 https://grupo4clasificacion.streamlit.app/
+
+---
+
+## 💻 Repositorios
+
+### 📁 Regresión
+- https://github.com/zerolab-dev/TRABAJO_REGRESION_G4  
+- https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git  
+
+### 📁 Clasificación
+- https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git  
+
+---
+
+## 📈 Enfoque Estratégico
+
+El proyecto integra dos paradigmas complementarios:
+
+- **Regresión:** Predicción cuantitativa del desempeño presupuestal  
+- **Clasificación:** Identificación temprana de riesgo en servicios de agua  
+
+**Valor generado:**
 - Anticipación de escenarios críticos  
-- Toma de decisiones basada en datos  
+- Soporte a la toma de decisiones  
 - Priorización eficiente de recursos públicos  
+
+---
+
+## 🏁 Conclusión
+
+Este proyecto demuestra cómo el uso de **Machine Learning en producción**, combinado con herramientas de despliegue accesibles como Streamlit, puede generar soluciones aplicables y escalables en el sector público.
+
+---
