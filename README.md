@@ -93,10 +93,10 @@ Limitada capacidad de acción proactiva en la gestión de calidad del agua.
 ## 🌐 3. Acceso a las Aplicaciones
 
 ### 🔹 App de Regresión (Ejecución Presupuestal)
-👉 https://mlenappucci-ndesplieguewebtif-ahxkwptjae8nchs9kvcqfq.streamlit.app/
+👉 https://grupo4regresion.streamlit.app/
 
 ### 🔹 App de Clasificación (Cloro Residual)
-👉 https://mlenappucci-ndesplieguewebtif-gdajjaamzx8icq7i7qhlsr.streamlit.app/
+👉 https://grupo4clasificacion.streamlit.app/
 
 ---
 
