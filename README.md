@@ -1,163 +1,91 @@
-# 📊 Proyecto de Despliegue de Modelos de Machine Learning en Web
+# 🚀 Despliegue de Modelos de Machine Learning en Producción para el Sector Público Peruano
 
-**Curso:** 612491 - Machine Learning en Producción (Despliegue Web)  
-**Docente:** Orlando Advíncula Zeballos  
-**Grupo:** 04  
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B?logo=streamlit&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-28B463?logo=xgboost&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-F7931E?logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?logo=pandas&logoColor=white)
 
----
-
-## 👥 Integrantes
-
-- Chavez Gallo, Daniel Alfredo  
-- Medina Santamaria, Carlos Santiago  
-- Poma Huaman, Brayan  
-- Ramos Arphi, Carlos Humberto  
-- Salcedo Piscoya, Ricardo Martin  
-- Sebastian Rios, Wilder Teddy  
+Este repositorio consolida el desarrollo, entrenamiento y despliegue web de dos modelos de Machine Learning diseñados para fortalecer la toma de decisiones proactiva en el sector público peruano. Transicionamos del análisis descriptivo tradicional hacia sistemas predictivos en dos ejes críticos: **Ejecución Presupuestal** y **Calidad del Agua**.
 
 ---
 
-## 🧠 Descripción del Proyecto
+## 📌 Información Académica
 
-Este repositorio presenta el desarrollo, implementación y despliegue de dos modelos de **Machine Learning** orientados a fortalecer la **toma de decisiones en el sector público peruano**, específicamente en:
-
-- 💰 Ejecución presupuestal  
-- 🚰 Calidad del agua (cloro residual)  
-
-El enfoque del proyecto busca evolucionar desde análisis descriptivos hacia **sistemas predictivos proactivos**, facilitando la gestión basada en datos.
-
----
-
-## 📌 Proyectos Desarrollados
-
-### 🔹 A. Modelo de Regresión: Ejecución Presupuestal
-
-**Objetivo:**  
-Predecir el nivel de ejecución presupuestal al cierre del tercer trimestre (septiembre).
-
-**Fuente de datos:**  
-- Datos abiertos del MEF (2017–2025)  
-- ~30,000 registros  
-
-**Problemática:**  
-La gestión presupuestal suele depender de análisis históricos descriptivos sin capacidad predictiva.
-
-**Modelo implementado:**  
-- Algoritmo: `XGBoost`  
-- Métrica principal: RMSE ≈ 13% – 14%  
-
-**Variables relevantes:**
-- % de ejecución acumulada a agosto  
-- Variación mensual  
-- Departamento  
-- Categoría de gasto  
+| Atributo | Detalle |
+| :--- | :--- |
+| **Curso** | 612491 - Machine Learning en Producción (Despliegue Web) |
+| **Docente** | Orlando Advíncula Zeballos |
+| **Grupo** | 04 |
+| **Integrantes** | Chavez Gallo D., Medina Santamaria C., Poma Huaman B., Ramos Arphi C., Salcedo Piscoya R., Sebastian Rios W. |
 
 ---
 
-### 🔹 B. Modelo de Clasificación: Cloro Residual (MVCS)
+## 🎯 Proyectos Desarrollados
 
-**Objetivo:**  
-Predecir el cumplimiento de niveles adecuados de cloro residual en sistemas de agua potable.
+### 🔹 A. Modelo de Regresión: Pronóstico de Ejecución Presupuestal
+**Objetivo:** Predecir el porcentaje de ejecución presupuestal institucional al cierre del tercer trimestre (septiembre) basado en el comportamiento previo.
 
-**Contexto:**
-- 18,855 prestadores de servicios de saneamiento  
-- Solo ~35% cumple con estándares  
+* **Contexto de Datos:** Histórico de datos abiertos del Ministerio de Economía y Finanzas (MEF) 2017–2025 (~30,000 registros procesados).
+* **Problema de Negocio:** La gestión presupuestal pública peruana carece de herramientas de alerta temprana, dependiendo excesivamente de análisis forenses o descriptivos.
+* **Solución Técnica:**
+    * **Algoritmo:** `XGBoost Regressor`.
+    * **Desempeño:** Error Cuadrático Medio (RMSE) validado entre **13% – 14%**.
+    * **Features Clave:** `% ejecución acumulada a agosto`, `variación intermensual`, `departamento` y `categoría de gasto`.
 
-**Problemática:**  
-Limitada capacidad de detección temprana de riesgo en la calidad del agua.
+### 🔹 B. Modelo de Clasificación: Riesgo en Cloro Residual (MVCS)
+**Objetivo:** Clasificar y predecir el cumplimiento de los estándares de cloración en sistemas de agua potable administrados por prestadores de servicios de saneamiento rurales/pequeños.
 
-**Enfoque del modelo:**
-- Clasificación supervisada  
-- Sistema de alerta temprana  
-- Priorización de intervenciones  
-
-**Impacto esperado:**
-- Optimización de inversiones públicas  
-- Mejora en asistencia técnica  
-- Gestión basada en riesgo  
-
----
-
-## ⚙️ Pipeline de Machine Learning
-
-### 🧪 1. Construcción y Entrenamiento
-
-- Limpieza y análisis exploratorio (`pandas`)  
-- Ingeniería de características  
-- Selección de variables:
-  - Boruta  
-  - RFE  
-- Modelos evaluados:
-  - Random Forest  
-  - Gradient Boosting  
-  - XGBoost  
-- Métricas:
-  - Regresión: RMSE, MAE  
-  - Clasificación: Accuracy  
-- Serialización del modelo (`.joblib`)  
+* **Contexto de Datos:** Universo de 18,855 prestadores (donde históricamente solo ~35% cumple la norma de salubridad).
+* **Problema de Negocio:** Incapacidad operativa para fiscalizar presencialmente a todos los prestadores a nivel nacional.
+* **Solución Técnica:**
+    * **Algoritmo:** Modelado supervisado de clasificación ensamblada.
+    * **Impacto:** Actúa como un Sistema de Alerta Temprana, optimizando la asignación de recursos para inspecciones físicas y focalizando la asistencia técnica estatal basada en **riesgo predictivo**.
 
 ---
 
-### 🖥️ 2. Desarrollo de la Aplicación
+## ⚙️ Arquitectura y Pipeline de Machine Learning
 
-- Framework: **Streamlit**  
-- Archivo principal: `streamlitpipelines.py`  
+El proyecto sigue metodologías estándar de MLOps para la puesta en producción de modelos aislados:
 
-**Funcionalidades:**
-- Ingreso de variables por el usuario  
-- Transformación de inputs  
-- Predicción en tiempo real  
-- Visualización de resultados:
-  - Gráficos  
-  - Indicadores clave  
+1.  **Ingeniería de Datos y Modelado (Training Pipeline)**
+    * **Preprocesamiento:** Limpieza de datos, imputación y análisis exploratorio exhaustivo (`pandas`, `seaborn`).
+    * **Selección de Features:** Algoritmos de envoltura y filtrado como **Boruta** y **RFE** (Recursive Feature Elimination) para asegurar parsimonia.
+    * **Entrenamiento Algorítmico:** Benchmarking entre *Random Forest*, *Gradient Boosting* y *XGBoost*.
+    * **Persistencia:** Exportación de modelos y transformadores óptimos vía `.joblib` para baja latencia de inferencia.
 
----
+2.  **Desarrollo de Interfaz de Usuario (Inference Application)**
+    * **Framework:** Construcción de UI interactiva utilizando **Streamlit** (`streamlitpipelines.py`).
+    * **Flujo:** Interfaz de formularios dinámicos $\rightarrow$ Sanitización de *inputs* $\rightarrow$ Inferencia del modelo cargado en caché $\rightarrow$ Renderizado de indicadores y gráficos de soporte.
 
-### 🚀 3. Despliegue
-
-- Control de versiones con GitHub  
-- Despliegue en **Streamlit Cloud**  
-- Gestión de dependencias con `requirements.txt`  
+3.  **Despliegue y CI/CD Básico (Deployment)**
+    * Repositorios versionados en GitHub.
+    * Entorno virtual replicable administrado a través de `requirements.txt`.
+    * Alojamiento de las aplicaciones en la nube PaaS de **Streamlit Cloud**.
 
 ---
 
-## 🌐 Aplicaciones en Producción
+## 🌐 Aplicaciones en Vivo (Endpoints de Producción)
 
-### 🔹 Modelo de Regresión
-👉 https://grupo4regresion.streamlit.app/
+Explora e interactúa con los modelos desplegados:
 
-### 🔹 Modelo de Clasificación
-👉 https://grupo4clasificacion.streamlit.app/
-
----
-
-## 💻 Repositorios
-
-### 📁 Regresión
-- https://github.com/zerolab-dev/TRABAJO_REGRESION_G4  
-- https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git  
-
-### 📁 Clasificación
-- https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git  
+* 📊 **App de Ejecución Presupuestal (Regresión):** [https://grupo4regresion.streamlit.app/](https://grupo4regresion.streamlit.app/)
+* 🚰 **App de Calidad del Agua (Clasificación):** [https://grupo4clasificacion.streamlit.app/](https://grupo4clasificacion.streamlit.app/)
 
 ---
 
-## 📈 Enfoque Estratégico
+## 💻 Estructura de Repositorios Fuente
 
-El proyecto integra dos paradigmas complementarios:
+El código fuente de modelado y despliegue se encuentra segmentado en los siguientes repositorios:
 
-- **Regresión:** Predicción cuantitativa del desempeño presupuestal  
-- **Clasificación:** Identificación temprana de riesgo en servicios de agua  
-
-**Valor generado:**
-- Anticipación de escenarios críticos  
-- Soporte a la toma de decisiones  
-- Priorización eficiente de recursos públicos  
+* **Módulo de Regresión:**
+    * `zerolab-dev/TRABAJO_REGRESION_G4` ([Enlace](https://github.com/zerolab-dev/TRABAJO_REGRESION_G4))
+    * Espejo: `WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF`
+* **Módulo de Clasificación:**
+    * `WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF` ([Enlace](https://github.com/WilderSr99/ML_EN_PRODUCCI-N_DESPLIEGUE_WEB_TIF.git))
 
 ---
 
-## 🏁 Conclusión
+## 🏁 Conclusión Estratégica
 
-Este proyecto demuestra cómo el uso de **Machine Learning en producción**, combinado con herramientas de despliegue accesibles como Streamlit, puede generar soluciones aplicables y escalables en el sector público.
-
----
+La dualidad de este proyecto (Regresión cuantitativa + Clasificación cualitativa de riesgo) demuestra la viabilidad técnica de introducir **Machine Learning operativo en el estado peruano**. Al acoplar el poder analítico de XGBoost con herramientas de despliegue ágil como Streamlit, hemos construido un prototipo escalable que transforma datos estáticos en **inteligencia accionable para la optimización del gasto y la salud pública.**
